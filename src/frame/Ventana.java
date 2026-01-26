@@ -56,7 +56,7 @@ public class Ventana extends JFrame {
         add(panelHumano, BorderLayout.WEST);
 
         //Cosas del mounsto
-        ImageIcon icono2 = new ImageIcon(getClass().getResource("/images/mounstro.png"));
+        ImageIcon icono2 = new ImageIcon(getClass().getResource("/images/mounstro1.jpg"));
         Image imagen2 = icono2.getImage();
         Image imagenRedimensionada2 = imagen2.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
         ImageIcon iconoRedimensionado2 = new ImageIcon(imagenRedimensionada2);
@@ -100,14 +100,50 @@ public class Ventana extends JFrame {
 
                     int valor = Integer.parseInt(mensaje.substring(1));
 
+
                     if (mensaje.charAt(0) == 'm') {
                         mounstro.setVida(valor);
                         referenciaMounstro.setText(String.valueOf(mounstro.getVida()));
                     } else {
+
+                        ImageIcon[] frames = new ImageIcon[] {
+                                new ImageIcon(
+                                        new ImageIcon(getClass().getResource("/images/mounstro1.jpg"))
+                                                .getImage().getScaledInstance(200, 140, Image.SCALE_SMOOTH)
+                                ),
+                                new ImageIcon(
+                                        new ImageIcon(getClass().getResource("/images/mounstro2.jpg"))
+                                                .getImage().getScaledInstance(200, 140, Image.SCALE_SMOOTH)
+                                ),
+                                new ImageIcon(
+                                        new ImageIcon(getClass().getResource("/images/mounstro3.jpg"))
+                                                .getImage().getScaledInstance(200, 140, Image.SCALE_SMOOTH)
+                                )
+                                ,
+                                new ImageIcon(
+                                        new ImageIcon(getClass().getResource("/images/mounstro3.jpg"))
+                                                .getImage().getScaledInstance(200, 140, Image.SCALE_SMOOTH)
+                                )
+                        };
+
+                        final int[] index = {0};
+
+                        Timer timer = new Timer(300, f -> {
+                            etiquetaImagen2.setIcon(frames[index[0]]);
+                            index[0]++;
+
+                            if ((index[0]) >= frames.length) {
+                                ((Timer) f.getSource()).stop();
+                                etiquetaImagen2.setIcon(frames[0]); // vuelve a la inicial
+                            }
+                        });
+
+                        timer.start();
+
                         humano.setVida(valor);
                         referenciaHumano.setText(String.valueOf(humano.getVida()));
-                    }
 
+                    }
                 } else {
                     //ACA ES CUANDO TERMINA LA PELEA
                     if (mensaje.substring(8).equals("mounstro")) {
@@ -128,7 +164,7 @@ public class Ventana extends JFrame {
                         btnPelear.setEnabled(false);
 
                         //Cambiar la imagen
-                        ImageIcon icono = new ImageIcon(getClass().getResource("/images/mounstroMuerto.png"));
+                        ImageIcon icono = new ImageIcon(getClass().getResource("/images/aja.jpg"));
                         Image imagen = icono.getImage();
                         Image imagenRedimensionada = imagen.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
                         ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
@@ -156,7 +192,6 @@ public class Ventana extends JFrame {
                         humano.setVida(valor);
                         referenciaHumano.setText(String.valueOf(humano.getVida()));
                     }
-
                 } else {
                     if (mensaje.substring(8).equals("mounstro")) {
                         referenciaHumano.setText("0");
@@ -225,5 +260,9 @@ public class Ventana extends JFrame {
             mounstro.setPoder((int)(mounstro.getPoder() - (mounstro.getPoder() * 0.5)));
         }
         return mounstro;
+    }
+
+    public void animacionMounstro(){
+
     }
 }

@@ -114,7 +114,12 @@ public class Inicio extends JFrame {
                     int rugido = Integer.parseInt(txtRugido.getText());
                     int poder = Integer.parseInt(txtPoder.getText());
                     mounstro = new Mounstro(nombre, vida, dano, rugido, poder);
-
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    setVisible(false);
                     Ventana ventana = new Ventana(humano, mounstro);
                 }
             }
