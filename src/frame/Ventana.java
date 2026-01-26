@@ -109,12 +109,32 @@ public class Ventana extends JFrame {
                     }
 
                 } else {
+                    //ACA ES CUANDO TERMINA LA PELEA
                     if (mensaje.substring(8).equals("mounstro")) {
                         referenciaHumano.setText("0");
                         btnPelear.setEnabled(false);
+
+                        //Cambiar la imagen
+                        ImageIcon icono = new ImageIcon(getClass().getResource("/images/humanoMuerto.png"));
+                        Image imagen = icono.getImage();
+                        Image imagenRedimensionada = imagen.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
+                        ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
+                        etiquetaImagen.setIcon(iconoRedimensionado);
+                        btnVelocidad.setEnabled(false);
+                        btnInteligencia.setEnabled(false);
+
                     } else if (mensaje.substring(8).equals("humano")) {
                         referenciaMounstro.setText("0");
                         btnPelear.setEnabled(false);
+
+                        //Cambiar la imagen
+                        ImageIcon icono = new ImageIcon(getClass().getResource("/images/mounstroMuerto.png"));
+                        Image imagen = icono.getImage();
+                        Image imagenRedimensionada = imagen.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
+                        ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
+                        etiquetaImagen2.setIcon(iconoRedimensionado);
+                        btnRugido.setEnabled(false);
+
                     }
                     textArea.setText(mensaje);
                 }
@@ -176,6 +196,7 @@ public class Ventana extends JFrame {
             } else {
                 //primero pega el humano
                 mounstro.setVida((mounstro.getVida() - humano.getDano()));
+                Mounstro nuevoMounstro = calcularPoderMounstro(mounstro);
                 if (mounstro.getVida() <= 0) {
                     mensaje = "gano el humano";
                     return mensaje;
@@ -193,5 +214,16 @@ public class Ventana extends JFrame {
         }
 
         return mensaje;
+    }
+
+    public Mounstro calcularPoderMounstro(Mounstro mounstro){
+        if(mounstro.getPoder() > 0){
+            //int poder = mounstro.getPoder() - 5;
+            //int dano = mounstro.getDano();
+
+            mounstro.setDano((int)(mounstro.getDano() + (mounstro.getPoder() * 0.5)));
+            mounstro.setPoder((int)(mounstro.getPoder() - (mounstro.getPoder() * 0.5)));
+        }
+        return mounstro;
     }
 }

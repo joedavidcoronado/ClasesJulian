@@ -2,11 +2,11 @@
 TAREAS DE ACTUALIZACION A ESTE PROYECTO
 
 (1). Arreglar el bug de que no llega hasta 0 cuando muere el personaje
-2. Agregar los botones de: Velocidad e Inteligencia (humano) y Poder y Rugido (mounstro)
-3. Cuando muere alguno colocar la misma imagen en blanco y negro
+(2). Agregar los botones de: Velocidad e Inteligencia (humano) y Poder y Rugido (mounstro)
+(3). Cuando muere alguno colocar la misma imagen en blanco y negro
 (4). Buscar mejores imagenes para colocarlo
-5. Logica: mientras menos vida tiene el mounstro, el poder disminuye pero se suma al daño
-6. En un rango de 5 puntos aleatorios el humano recibe "ayuda de Dios" y suma 10 puntos
+(5). Logica: mientras menos vida tiene el mounstro, el poder disminuye pero se suma al daño
+(6). En un rango de 5 puntos aleatorios el humano recibe "ayuda de Dios" y suma 10 puntos
 de vida y sale un mensaje diciendo que pasó
 7. Cuando alguno de los 2 pegue un golpe debe salir al menos otra imagen simulando
 una animación
