@@ -2,6 +2,7 @@ package frame;
 
 import logic.Humano;
 import logic.Mounstro;
+import logic.MusicaDeFondo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +23,10 @@ public class Ventana extends JFrame {
         setSize(600, 600);
         setBackground(Color.LIGHT_GRAY);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        MusicaDeFondo musicaDeFondo = new MusicaDeFondo("/music/musica.wav");
+        musicaDeFondo.iniciar();
+
 
         JPanel panelHumano = new JPanel();
         panelHumano.setLayout(new BoxLayout(panelHumano, BoxLayout.Y_AXIS));

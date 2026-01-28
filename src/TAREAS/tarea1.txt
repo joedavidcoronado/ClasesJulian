@@ -8,6 +8,6 @@ TAREAS DE ACTUALIZACION A ESTE PROYECTO
 (5). Logica: mientras menos vida tiene el mounstro, el poder disminuye pero se suma al daño
 (6). En un rango de 5 puntos aleatorios el humano recibe "ayuda de Dios" y suma 10 puntos
 de vida y sale un mensaje diciendo que pasó
-7. Cuando alguno de los 2 pegue un golpe debe salir al menos otra imagen simulando
+(7). Cuando alguno de los 2 pegue un golpe debe salir al menos otra imagen simulando
 una animación
-8. Agregar musica de fondo (una antes de iniciar la pelea y otra luego de iniciar)
+(8). Agregar musica de fondo (una antes de iniciar la pelea y otra luego de iniciar)
