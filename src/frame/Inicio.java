@@ -59,27 +59,6 @@ public class Inicio extends JFrame {
         JPanel panelElegirPersonaje = new JPanel(new FlowLayout(FlowLayout.LEFT) );
 
 
-        ImageIcon iconoHumano = new ImageIcon(getClass().getResource("/images/mounstro1.jpg"));
-        Image imagenHumano = iconoHumano.getImage();
-        Image imagenRedimensionada = imagenHumano.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
-        ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
-        JLabel Humano1 = new JLabel(iconoRedimensionado);
-        panelElegirPersonaje.add(Humano1);
-
-        ImageIcon iconoHumano2 = new ImageIcon(getClass().getResource("/images/mounstro1.jpg"));
-        Image imagenHumano2 = iconoHumano2.getImage();
-        Image imagenRedimensionada2 = imagenHumano2.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
-        ImageIcon iconoRedimensionado2 = new ImageIcon(imagenRedimensionada2);
-        JLabel Humano2 = new JLabel(iconoRedimensionado2);
-        panelElegirPersonaje.add(Humano2);
-
-        ImageIcon iconoHumano3 = new ImageIcon(getClass().getResource("/images/mounstro1.jpg"));
-        Image imagenHumano3 = iconoHumano3.getImage();
-        Image imagenRedimensionada3= imagenHumano3.getScaledInstance(200, 140, Image.SCALE_SMOOTH);
-        ImageIcon iconoRedimensionado3 = new ImageIcon(imagenRedimensionada3);
-        JLabel Humano3 = new JLabel(iconoRedimensionado3);
-        panelElegirPersonaje.add(Humano3);
-
         add(panelElegirPersonaje);
 
 

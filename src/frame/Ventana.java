@@ -27,7 +27,8 @@ public class Ventana extends JFrame {
         MusicaDeFondo musicaDeFondo = new MusicaDeFondo("/music/musica.wav");
         musicaDeFondo.iniciar();
 
-        MusicaDeFondo musicaFinal = new MusicaDeFondo("/music/final.wav");
+
+
 
         JPanel panelHumano = new JPanel();
         panelHumano.setLayout(new BoxLayout(panelHumano, BoxLayout.Y_AXIS));
@@ -166,7 +167,8 @@ public class Ventana extends JFrame {
                         btnInteligencia.setEnabled(false);
 
                         musicaDeFondo.detener();
-                        musicaFinal.iniciar();
+                        //MusicaDeFondo musicaFinal = new MusicaDeFondo("/music/final.wav");
+                        //musicaFinal.iniciar();
 
                     } else if (mensaje.substring(8).equals("humano")) {
                         referenciaMounstro.setText("0");
@@ -181,7 +183,8 @@ public class Ventana extends JFrame {
                         btnRugido.setEnabled(false);
 
                         musicaDeFondo.detener();
-                        musicaFinal.iniciar();
+                        //MusicaDeFondo musicaFinal = new MusicaDeFondo("/music/final.wav");
+                        //musicaFinal.iniciar();
                     }
                     textArea.setText(mensaje);
                 }
