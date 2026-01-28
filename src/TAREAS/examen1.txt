@@ -1,0 +1,26 @@
+Examen de Julian (reconociendo en que nos falta aprender)
+
+1. ¿Que es un objeto en POO?
+Es una porcion de codigo que tiene atributos y metodos y representa un objeto del mundo real
+
+2. ¿Que es un Timer?
+Es un contador que nos ayuda a detener el HILO de acciones cuantas veces querramos esperando un delay
+
+3. ¿Como se agrega una umagen a un JFrame?
+Se crea un ImagenIcon, donde leemos con getClass().getResource() y esa variable se la pasamos a un
+Jlabel que agregamos a un JPanel
+
+4. ¿Como logro organizar los elementos dentro de un JPanel?
+con el setLoyout, o en el add con el BorderLoyout.
+
+5. ¿Como se arregla un error de codigo?
+- Primero leemos las recomendaciones (click derecho)
+- Leemos la terminal (ahi dice el error)
+- Leer y modificar el codigo
+
+6. ¿Hay algun tipo de error que no aparezca en terminal?
+si, por ejemplo, archivos corruptos, problemas de compilación, problemas con el SDK
+
+7. ¿Como se hereda y como se implementa una clase?
+La clase de hereda (extends) y la interfaz se implementa (implements)
+
